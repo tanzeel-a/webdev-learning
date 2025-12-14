@@ -4,11 +4,27 @@
     font-family: 'Courier Prime', monospace;
 }
 
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 80px; /* Adjust based on navbar height */
+}
+
 .navbar {
+    /* Fixed positioning - navbar stays at top when scrolling */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Original flexbox layout */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    /* Background to prevent content showing through */
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    /* Subtle shadow under navbar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-left {
@@ -55,7 +71,7 @@
 .hero-heading {
     position: absolute;
     top: 50%;
-    left: 55%;
+    left: 58%;
     transform: translate(-50%, -50%);
     font-size: 4.5rem;
     font-weight: 700;
@@ -73,6 +89,502 @@
     object-fit: cover;
 }
 
+.search-upload-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 40px;
+}
+
+.search-container,
+.upload-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-container h2,
+.upload-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.search-bar-wrapper,
+.upload-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input,
+.upload-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Courier Prime', monospace;
+    outline: none;
+}
+
+.search-btn,
+.upload-btn {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.about-section {
+    width: 100%;
+    padding: 0px 40px;
+    text-align: left;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.about-heading {
+    padding: 20px 0px;
+    width: 100vw;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.left-section {
+    flex: 1;
+    max-width: 650px;
+}
+
+.about-point {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.about-subheading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+.right-section {
+    flex: 1;
+    max-width: 600px;
+    align-items: right;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.features-list li {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000;
+    position: relative;
+    padding-left: 20px;
+}
+
+.features-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('images/arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.features-list li strong {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.faq-section {
+    width: 100%;
+    padding: 40px 40px;
+    text-align: left;
+    position: relative;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/question.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.faq-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.faq-container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.faq-question-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    flex: 1;
+}
+
+.faq-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle .arrow {
+    font-size: 1rem;
+    color: #000;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.faq-item.active .faq-answer-wrapper {
+    max-height: 500px;
+    padding-top: 10px;
+}
+
+.faq-answer {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #000;
+    margin: 0;
+}
+
+.reviews-section {
+    width: 100vw;
+    padding: 40px;
+}
+
+.reviews-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.reviews-container {
+    display: flex;
+    width: 100%;
+    gap: 4vw; /* increased horizontal gap using viewport width */
+}
+
+.left-section-rev {
+    width: 56vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-section-rev {
+    max-height:10px;
+    width: 26vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.reviews-slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review-slide {
+    min-width: 100%;
+    padding: 25px 30px;
+    box-sizing: border-box;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.review-author {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.review-affiliation {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.review-rating {
+    font-size: 1rem;
+    color: #000;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+    background-color: #000;
+}
+
+.add-review-section {
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.add-review-textarea {
+    width: 100%;
+    min-height: 90px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #000;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.add-review-textarea::placeholder {
+    color: #000;
+}
+
+.add-review-btn {
+    padding: 12px 30px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Courier Prime', monospace;
+    transition: all 0.3s ease;
+}
+
+.add-review-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier Prime', monospace;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: #ccc;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
 @media (max-width: 768px) {
     .hero-heading {
         font-size: 2.5rem;
@@ -81,5 +593,14 @@
     
     .hero-section {
         padding: 40px 15px;
+    }
+    
+    .reviews-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .reviews-slider-container {
+        max-width: 100%;
     }
 }

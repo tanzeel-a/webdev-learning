@@ -3,31 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetProtocol</title>
+    <title>ProtocolApp</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
                                  
 </head>
 <body>
+<!-- Navigation bar with ProtocolApp logo on left and Login button on right -->
 <nav class="navbar">
     <div class="navbar-left">
-        <h1>GetProtocol</h1>
+        <h1>ProtocolApp</h1>
     </div>
     <div class="navbar-right">
         <button class="login-btn">Login</button>
     </div>
 </nav>
-
+<!-- Hero section with typewriter heading overlay on full-width hero image -->
 <section class="hero-section">
     <div class="hero-content">
-        <h1 class="hero-heading">A Protocol Repository</h1>
+        <h1 class="hero-heading">A Protocol Repository..</h1>
         <img src="images/hero2.jpg" alt="Protocol Repository" class="hero-image">
     </div>
 </section>
 
+<!-- Search and Upload section with two divs -->
+<section class="search-upload-section">
+    <div class="search-container">
+        <h2>Search for your protocol</h2>
+        <div class="search-bar-wrapper">
+            <input type="text" placeholder="Search protocols..." class="search-input">
+            <button class="search-btn">
+                <img src="images/search_button.png" alt="Search" class="button-icon">
+            </button>
+        </div>
+    </div>
+    <div class="upload-container">
+        <h2>Upload your protocol</h2>
+        <div class="upload-bar-wrapper">
+            <input type="text" placeholder="Put your protocol here.." class="upload-input">
+            <button class="upload-btn">
+                <img src="images/upload.png" alt="Upload" class="button-icon">
+            </button>
+        </div>
+    </div>
+</section>
+<!-- upload and search section ends -->
+
+<!-- About Us section -->
+<section class="about-section">
+    <h2 class="about-heading">About ProtocolApp</h2>
+    <div class="about-wrapper">
+        <div class="left-section">
+            <p class="about-point">A protocol database built for Indian labs</p>
+            <h3 class="about-subheading">Upload. Search. Reproduce.</h3>
+        </div>
+        <div class="right-section">
+            <ul class="features-list">
+                <li>
+                    <strong>India-specific reagents</strong>
+                    Protocols built around Indian suppliers and realistic substitutes.
+                </li>
+                <li>
+                    <strong>Quality variability addressed</strong>
+                    Accounts for batch-to-batch and vendor-level reagent differences.
+                </li>
+                <li>
+                    <strong>Real equipment constraints</strong>
+                    Designed for the instruments Indian labs actually use.
+                </li>
+                <li>
+                    <strong>Standardized protocol format</strong>
+                    Every protocol follows the same clear, reproducible structure.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ section -->
+<section class="faq-section">
+    <h2 class="faq-heading">Your doubts are answered here</h2>
+    
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question-wrapper">
+                <h3 class="faq-question">What is ProtocolApp?</h3>
+                <button class="faq-toggle" aria-label="Toggle answer">
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="faq-answer-wrapper">
+                <p class="faq-answer">ProtocolApp is a protocol database specifically built for Indian labs, featuring India-specific reagents, realistic substitutes, and protocols designed for equipment commonly used in Indian laboratories.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question-wrapper">
+                <h3 class="faq-question">How do I search for protocols?</h3>
+                <button class="faq-toggle" aria-label="Toggle answer">
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="faq-answer-wrapper">
+                <p class="faq-answer">Simply use the search bar at the top of the page. Type keywords related to your protocol, and you'll find relevant protocols from our database.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question-wrapper">
+                <h3 class="faq-question">Can I upload my own protocols?</h3>
+                <button class="faq-toggle" aria-label="Toggle answer">
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="faq-answer-wrapper">
+                <p class="faq-answer">Yes! Use the upload section to share your protocols with the community. Make sure to follow the standardized protocol format for consistency.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question-wrapper">
+                <h3 class="faq-question">Are the reagents India-specific?</h3>
+                <button class="faq-toggle" aria-label="Toggle answer">
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="faq-answer-wrapper">
+                <p class="faq-answer">Absolutely! All protocols are built around Indian suppliers and include realistic substitutes that are readily available in the Indian market.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question-wrapper">
+                <h3 class="faq-question">How does ProtocolApp handle reagent quality variability?</h3>
+                <button class="faq-toggle" aria-label="Toggle answer">
+                    <span class="arrow">▼</span>
+                </button>
+            </div>
+            <div class="faq-answer-wrapper">
+                <p class="faq-answer">Our protocols account for batch-to-batch and vendor-level reagent differences, ensuring reproducibility even with quality variations common in the Indian market.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<div class="reviews-section">
+    <h2 class="reviews-heading">Reviews</h2>
+    
+    <div class="reviews-container">
+        <div class="left-section-rev">
+            <div class="reviews-slider-wrapper">
+                <div class="reviews-slider-track" id="reviewsSliderTrack">
+                    <!-- Reviews will be dynamically inserted here -->
+                </div>
+            </div>
+            
+            <div class="slider-dots" id="sliderDots">
+                <!-- Dots will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <div class="right-section-rev">
+            <div class="add-review-section">
+                <textarea class="add-review-textarea" placeholder="Have you used ProtocolApp? We'd love to hear from you!!"></textarea>
+                <button class="add-review-btn">Add Your Review</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Team</a></li>
+      </ul>
+
+    </div>
+
+    <div class="footer-bottom">
+      ProtocolApp© 2025 · Designed for you
+    </div>
+  </footer>
+
+<!-- script for the typewriter effect -->
 <script src="script.js"></script>
+<!-- script ends -->
 </body>
 </html>
