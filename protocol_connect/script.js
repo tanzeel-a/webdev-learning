@@ -2,22 +2,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get the heading element
     const heading = document.querySelector('.hero-heading');
-    const text = heading.textContent; // Store original text: "A Protocol Repository"
-    
+    // Store the original text
+    const text = heading.textContent;
     // Clear the heading initially
     heading.textContent = '';
     
+    // Type each letter with a delay
     let index = 0;
-    
-    // Function to type each letter
-    function typeWriter() {
+    function typeLetter() {
         if (index < text.length) {
-            heading.textContent += text.charAt(index); // Add one letter at a time
+            heading.textContent += text[index];
             index++;
-            setTimeout(typeWriter, 100); // Delay of 100ms between each letter
+            // Wait 100ms before typing next letter
+            setTimeout(typeLetter, 100);
         }
     }
     
-    // Start the typewriter effect
-    typeWriter();
+    // Start typing effect
+    typeLetter();
 });

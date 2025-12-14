@@ -55,9 +55,9 @@
 .hero-heading {
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 55%;
     transform: translate(-50%, -50%);
-    font-size: 4.7rem;
+    font-size: 4.5rem;
     font-weight: 700;
     color: #000;
     z-index: 10;
