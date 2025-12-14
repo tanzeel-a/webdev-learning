@@ -604,3 +604,23 @@ body {
         max-width: 100%;
     }
 }
+
+
+/* hover effect */
+button,
+.add-review-btn,
+.slider-btn { /* add any specific button classes you use */
+    transition: 
+        background-color 0.3s cubic-bezier(.4,0,.2,1),
+        color 0.3s cubic-bezier(.4,0,.2,1),
+        transform 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+button:hover,
+.add-review-btn:hover,
+.slider-btn:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+    transform: scale(1.02);
+}
+/* hover effect over */
