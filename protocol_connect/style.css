@@ -605,7 +605,265 @@ body {
     }
 }
 
+/* ---------------- Responsive tweaks ---------------- */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 16px 28px;
+        backdrop-filter: blur(6px);
+    }
 
+    .search-upload-section {
+        gap: 24px;
+        padding: 50px 24px;
+    }
+
+    .about-wrapper {
+        gap: 36px;
+    }
+
+    .reviews-section {
+        padding: 32px 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        padding-top: 72px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 20px 0;
+    }
+
+    .hero-heading {
+        position: static;
+        transform: none;
+        font-size: 3.2rem;
+        margin-bottom: 20px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .search-upload-section {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 24px;
+    }
+
+    .search-container,
+    .upload-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .left-section,
+    .right-section {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .reviews-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .left-section-rev,
+    .right-section-rev {
+        width: 100%;
+    }
+
+    .right-section-rev {
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 64px;
+    }
+
+    .navbar {
+        padding: 14px 20px;
+        gap: 12px;
+    }
+
+    .navbar-left h1 {
+        font-size: 1.4rem;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .hero-section {
+        padding: 20px 16px;
+    }
+
+    .hero-heading {
+        font-size: 2.4rem;
+        line-height: 1.15;
+    }
+
+    .search-input,
+    .upload-input {
+        font-size: 15px;
+    }
+
+    .search-bar-wrapper,
+    .upload-bar-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-btn,
+    .upload-btn {
+        justify-content: flex-start;
+    }
+
+    .about-heading {
+        font-size: 2.2rem;
+        margin-bottom: 24px;
+    }
+
+    .about-point {
+        font-size: 1.1rem;
+    }
+
+    .about-subheading {
+        font-size: 1.3rem;
+    }
+
+    .faq-container {
+        padding: 0 12px;
+    }
+
+    .reviews-section {
+        padding: 28px 20px;
+    }
+
+    .review-slide {
+        padding: 18px 16px;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 540px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .login-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 78px;
+    }
+
+    .hero-heading {
+        font-size: 1.8rem;
+    }
+
+    .search-upload-section {
+        padding: 28px 16px;
+        gap: 16px;
+    }
+
+    .search-container h2,
+    .upload-container h2 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .search-bar-wrapper,
+    .upload-bar-wrapper {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+
+    .search-input,
+    .upload-input {
+        width: 100%;
+        padding: 10px 14px 10px 52px;
+        font-size: 14px;
+        border-radius: 18px;
+    }
+
+    .search-btn,
+    .upload-btn {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        border-radius: 10px;
+        padding: 0 4px;
+        justify-content: flex-start;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .button-icon {
+        width: 18px;
+        height: 18px;
+        margin-left: 0;
+        display: block;
+    }
+
+    .faq-heading,
+    .reviews-heading {
+        font-size: 1.5rem;
+    }
+
+    .about-heading {
+        font-size: 1.8rem;
+    }
+
+    .about-subheading {
+        font-size: 1.1rem;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .reviews-container {
+        gap: 18px;
+    }
+
+    .add-review-btn,
+    .login-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+}
 /* hover effect */
 button,
 .add-review-btn,
@@ -623,6 +881,30 @@ button:hover,
     background-color: #000 !important;
     color: #fff !important;
     transform: scale(1.02);
+}
+
+/* Override hover for icon-only search/upload buttons */
+.search-btn:hover,
+.upload-btn:hover {
+    background-color: transparent !important;
+    color: inherit !important;
+    transform: scale(1.06);
+}
+
+/* Global icon hover: scale only, no background flip */
+button .button-icon,
+.social-icons a i {
+    transition: transform 0.25s cubic-bezier(.4, 0, .2, 1);
+}
+
+button:hover .button-icon {
+    transform: scale(1.08);
+}
+
+.social-icons a:hover {
+    background-color: transparent;
+    color: inherit;
+    transform: scale(1.08);
 }
 
 /* hover effect over */
